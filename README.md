@@ -9,6 +9,7 @@ A shared library of AI skills and working material for designers — UX, UI and 
 |---|---|---|---|
 | [Design Critique](design-critique) | UX, UI | Ideate, Design, Test | Skill |
 | [Design Library Finder](design-library-finder) | UX, UI, Research | Discovery, Define, Ideate, Design, Test, Handoff | Skill |
+| [Design Systems](design-systems) | UI, UX | Define, Design, Test, Handoff | Skill, Template, Guide |
 | [Find Skills (Vercel skills CLI)](Find_Skill) | UX, UI, Research | Discovery, Define, Ideate, Design, Test, Handoff | Skill |
 | [Interface Design Checklists](interface-design-checklists-agnostic) | UX, UI | Design, Test | Skill, Checklist, Knowledge base, Template |
 | [UX Writing & Content Strategy](ux-writing) | UX | Define | Skill, Guide |

@@ -99,6 +99,57 @@
       "added": "2026-10-26"
     },
     {
+      "id": "design-systems",
+      "name": "Design Systems",
+      "path": "design-systems",
+      "summary": "Eleven skills and three commands to build, document and maintain a design system — tokens, component specs, naming, theming, motion, icons, localization, accessibility audits and governance.",
+      "area": [
+        "UI",
+        "UX"
+      ],
+      "phase": [
+        "Define",
+        "Design",
+        "Test",
+        "Handoff"
+      ],
+      "format": [
+        "Skill",
+        "Template",
+        "Guide"
+      ],
+      "topics": [
+        "design-system",
+        "design-tokens",
+        "tokens",
+        "component-spec",
+        "components",
+        "naming-convention",
+        "theming",
+        "dark-mode",
+        "multi-brand",
+        "motion",
+        "icons",
+        "iconography",
+        "localization",
+        "rtl",
+        "accessibility",
+        "wcag",
+        "accessibility-audit",
+        "documentation",
+        "pattern-library",
+        "governance",
+        "versioning",
+        "design-system-audit"
+      ],
+      "language": "en",
+      "platform": "Claude (one skill per subfolder in skills/, or the whole plugin in Claude Code); the text works as agent instructions on any platform",
+      "how_to_use": "Pick the skill for your task from the list below (e.g. skills/design-token for the token layer, skills/component-spec for a component) and install that subfolder as a skill. Then describe your product, brand and existing system and ask for the deliverable.",
+      "entry_point": "design-systems/README.md",
+      "maintainer": "MC Dean (third party, MIT licence)",
+      "added": "2026-10-26"
+    },
+    {
       "id": "find_skill",
       "name": "Find Skills (Vercel skills CLI)",
       "path": "Find_Skill",
