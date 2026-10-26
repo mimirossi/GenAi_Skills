@@ -1,0 +1,112 @@
+<!--
+  WIREFRAME SET TEMPLATE
+  ----------------------------------------------------------------------------
+  HOW THE SKILL USES THIS FILE:
+  This is the FINAL deliverable of the from-scratch flow. After the checklist
+  walkthrough (or an imported filled checklist) and the framing questions, the
+  proposal is turned into concrete wireframes — one screen per step of the
+  proposed flow — each with a description and the checklist decisions it embodies,
+  plus the real-world reference that inspired it. Copy this file, fill in
+  WIREFRAME_DATA, and present it as an .html artifact.
+
+  Fill in:
+    - META.title / META.context / META.intro -> what this proposes, in one line + a short paragraph
+    - SCREENS -> one object per screen. For each:
+        step        -> "1", "2"... (order of the flow)
+        title       -> screen name (e.g. "Tickets")
+        svg         -> an inline wireframe SVG of the screen. Use viewBox="0 0 320 380"
+                       (portrait phone-ish) so screens sit side by side. Draw with plain
+                       rects/lines: neutral #CFCCC1 for structure, filled #E7E5DE for
+                       elements, accent #3B45E0 for the primary action/element, green
+                       #2F7D4F to highlight a key interaction. Keep it schematic — a
+                       wireframe, not a hi-fi mock.
+        description -> what happens on this screen and why (2-4 sentences)
+        decisions   -> array of short strings: the checklist answers this screen resolves
+        reference   -> { name, look } : the real product to study and exactly what to look at
+
+  Keep all state in memory — do not add localStorage (it fails in artifacts).
+-->
+<div id="app"></div>
+
+<script>
+  /* ====================== FILL THIS IN ====================== */
+  const META = {
+    title: "Proposed flow",
+    context: "New design · platform · audience",
+    intro: "One short paragraph on the overall approach and why it's shaped this way.",
+  };
+
+  const SCREENS = [
+    {
+      step: "1",
+      title: "Screen name",
+      svg: `<svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="318" height="378" rx="18" fill="none" stroke="#CFCCC1"/></svg>`,
+      description: "What happens here and why.",
+      decisions: ["Checklist decision this embodies"],
+      reference: { name: "Product", look: "what to study in it" },
+    },
+    // ...more screens
+  ];
+  /* ========================================================= */
+
+  const styles = `
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+    :root{
+      --paper:#F4F3EE; --card:#FBFAF7; --ink:#1B1B18; --muted:#78766C;
+      --line:#E2E0D8; --line-strong:#CFCCC1; --accent:#3B45E0; --accent-ink:#2A32B8;
+      --accent-wash:#ECEDFB; --good:#2F7D4F; --good-wash:#E7F2EB;
+      --shadow:0 1px 2px rgba(27,27,24,.05),0 12px 34px -16px rgba(27,27,24,.22);
+    }
+    *{box-sizing:border-box}
+    #app{font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--paper); line-height:1.5; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:900px; margin:0 auto; padding:40px 28px 96px}
+    .eyebrow{font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--accent-ink)}
+    h1{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(30px,5vw,46px); line-height:1.02; letter-spacing:-.02em; margin:12px 0 8px}
+    .context{color:var(--muted); font-size:14px; font-family:'JetBrains Mono',monospace}
+    .intro{font-size:16px; max-width:66ch; margin:16px 0 0}
+
+    .screen{display:grid; grid-template-columns:280px 1fr; gap:26px; align-items:start; margin:30px 0; padding:22px; background:var(--card); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow)}
+    .device{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:14px}
+    .device svg{display:block; width:100%; height:auto}
+    .device svg text{font-family:'JetBrains Mono',monospace}
+    .meta .step{font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12px; color:var(--accent-ink); letter-spacing:.1em}
+    .meta h2{font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:24px; letter-spacing:-.01em; margin:4px 0 10px}
+    .meta .desc{font-size:15.5px; margin:0 0 14px}
+    .dlabel{font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:7px}
+    .decisions{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px}
+    .decisions span{font-size:12.5px; background:var(--accent-wash); color:var(--accent-ink); border-radius:99px; padding:5px 11px}
+    .ref{display:flex; gap:9px; align-items:baseline; font-size:14px; padding:12px 14px; background:var(--good-wash); border:1px solid #CFE6D6; border-radius:10px}
+    .ref b{font-family:'Space Grotesk',sans-serif}
+    .ref .k{font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--good); flex:none}
+
+    @media (max-width:640px){ .screen{grid-template-columns:1fr} .device{max-width:280px} }
+    @media print{ #app{background:#fff} .screen{break-inside:avoid} }
+  `;
+
+  function render(){
+    const screensHTML = SCREENS.map(s=>`
+      <section class="screen">
+        <div class="device">${s.svg}</div>
+        <div class="meta">
+          <div class="step">STEP ${s.step}</div>
+          <h2>${s.title}</h2>
+          <p class="desc">${s.description}</p>
+          ${s.decisions&&s.decisions.length?`<div class="dlabel">Dalla checklist</div><div class="decisions">${s.decisions.map(d=>`<span>${d}</span>`).join('')}</div>`:''}
+          ${s.reference?`<div class="ref"><span class="k">Ref</span><span><b>${s.reference.name}</b> — ${s.reference.look}</span></div>`:''}
+        </div>
+      </section>`).join('');
+
+    document.getElementById('app').innerHTML = `
+      <style>${styles}</style>
+      <div class="wrap">
+        <header>
+          <div class="eyebrow">Proposed Wireframes</div>
+          <h1>${META.title}</h1>
+          <div class="context">${META.context}</div>
+          <p class="intro">${META.intro}</p>
+        </header>
+        ${screensHTML}
+      </div>`;
+  }
+  render();
+</script>
