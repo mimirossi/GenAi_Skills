@@ -24,6 +24,7 @@ This table and the searchable [`catalog.json`](catalog.json) are generated autom
 - "Find UX material for usability testing"
 - "Is there a checklist for reviewing forms?"
 - "Cosa c'è per la fase di discovery?"
+- Find a skill to help me build a booking flow for an hotel's site
 
 It reads the live catalogue, so new resources show up as soon as they are added.
 
