@@ -1,68 +1,168 @@
 {
   "name": "GenAi_Skills — Design resource library",
   "repository": "https://github.com/mimirossi/GenAi_Skills",
-  "schema_version": "1.0",
+  "schema_version": "1.1",
+  "generated": "Automatically from each folder's README.md/LIBRARY.md — do not edit by hand.",
   "updated": "2026-10-26",
   "taxonomy": {
-    "area": ["UX", "UI", "Research"],
-    "phase": ["Discovery", "Define", "Ideate", "Design", "Test", "Handoff"],
-    "format": ["Skill", "Template", "Checklist", "Guide", "Knowledge base"],
-    "topics": "Free lowercase tags in English, e.g. accessibility, design-system, interviews, typography, forms"
+    "area": [
+      "UX",
+      "UI",
+      "Research"
+    ],
+    "phase": [
+      "Discovery",
+      "Define",
+      "Ideate",
+      "Design",
+      "Test",
+      "Handoff"
+    ],
+    "format": [
+      "Skill",
+      "Template",
+      "Checklist",
+      "Guide",
+      "Knowledge base"
+    ],
+    "topics": "Free lowercase tags in English"
   },
   "resources": [
-    {
-      "id": "interface-design-checklists",
-      "name": "Interface Design Checklists",
-      "path": "interface-design-checklists-agnostic",
-      "summary": "Agent package with 1,084 review questions across 31 interface patterns, usable to design a component from scratch or to audit an existing design.",
-      "area": ["UX", "UI"],
-      "phase": ["Design", "Test"],
-      "format": ["Skill", "Checklist", "Knowledge base", "Template"],
-      "topics": [
-        "ux-review", "usability", "heuristic-evaluation", "design-audit", "interface-patterns",
-        "forms", "web-forms", "inline-validation", "authentication", "onboarding", "offboarding",
-        "navigation", "hamburger-menu", "mega-dropdowns", "back-button", "modals", "overlays",
-        "tables", "filtering", "sorting", "accordion", "carousels", "sliders", "date-pickers",
-        "autocomplete", "configurators", "maps", "charts", "timelines", "video-player",
-        "product-page", "pricing-plans", "feature-comparison", "reviews", "testimonials",
-        "donation-forms", "seating-plans", "privacy", "touch", "disabled-buttons", "exit-paths"
-      ],
-      "language": "it",
-      "platform": "Agnostic — any enterprise AI platform (instructions + knowledge base + output templates)",
-      "how_to_use": "Load AGENT-INSTRUCTIONS.md as the agent's instructions, attach the files in knowledge-base/ as knowledge, and use templates-html-di-riferimento/ as the output structure. Read only the pattern files relevant to the task.",
-      "entry_point": "interface-design-checklists-agnostic/README.md",
-      "maintainer": "mimirossi",
-      "added": "2026-10-26"
-    },
-    {
-      "id": "find-skills",
-      "name": "Find Skills (Vercel skills CLI)",
-      "path": "Find_Skill",
-      "summary": "Skill that helps an AI agent discover and install public agent skills from the open skills ecosystem, bundled with the source of Vercel's skills CLI.",
-      "area": ["UX", "UI", "Research"],
-      "phase": ["Discovery", "Define", "Ideate", "Design", "Test", "Handoff"],
-      "format": ["Skill"],
-      "topics": ["skill-discovery", "ai-agents", "tooling", "workflow", "automation"],
-      "language": "en",
-      "platform": "Coding agents (Claude Code, Cursor, Codex…). The CLI needs Node.js; designers will mostly use the SKILL.md only.",
-      "how_to_use": "For designers: install Find_Skill/skills/find-skills/SKILL.md as a skill. The rest of the folder is the CLI source code (MIT, © Vercel) and is for developers.",
-      "entry_point": "Find_Skill/skills/find-skills/SKILL.md",
-      "maintainer": "Vercel (third party, MIT licence)",
-      "added": "2026-10-26"
-    },
     {
       "id": "design-library-finder",
       "name": "Design Library Finder",
       "path": "design-library-finder",
       "summary": "Skill that searches this repository's catalogue by area, work phase and topic and returns the resources to use, with links and how to apply them.",
-      "area": ["UX", "UI", "Research"],
-      "phase": ["Discovery", "Define", "Ideate", "Design", "Test", "Handoff"],
-      "format": ["Skill"],
-      "topics": ["resource-search", "library", "skill-discovery", "onboarding"],
+      "area": [
+        "UX",
+        "UI",
+        "Research"
+      ],
+      "phase": [
+        "Discovery",
+        "Define",
+        "Ideate",
+        "Design",
+        "Test",
+        "Handoff"
+      ],
+      "format": [
+        "Skill"
+      ],
+      "topics": [
+        "resource-search",
+        "library",
+        "skill-discovery",
+        "onboarding"
+      ],
       "language": "en",
       "platform": "Claude (claude.ai skills); the logic can be reused as agent instructions elsewhere",
-      "how_to_use": "Install the design-library-finder folder as a skill, then ask e.g. \"find UX material for usability testing\".",
+      "how_to_use": "Install this folder as a skill, then ask e.g. \"find UX material for usability testing\".",
       "entry_point": "design-library-finder/SKILL.md",
+      "maintainer": "mimirossi",
+      "added": "2026-10-26"
+    },
+    {
+      "id": "find_skill",
+      "name": "Find Skills (Vercel skills CLI)",
+      "path": "Find_Skill",
+      "summary": "Skill that helps an AI agent discover and install public agent skills from the open skills ecosystem, bundled with the source of Vercel's skills CLI.",
+      "area": [
+        "UX",
+        "UI",
+        "Research"
+      ],
+      "phase": [
+        "Discovery",
+        "Define",
+        "Ideate",
+        "Design",
+        "Test",
+        "Handoff"
+      ],
+      "format": [
+        "Skill"
+      ],
+      "topics": [
+        "skill-discovery",
+        "ai-agents",
+        "tooling",
+        "workflow",
+        "automation"
+      ],
+      "language": "en",
+      "platform": "Coding agents (Claude Code, Cursor, Codex…). The CLI needs Node.js; designers will mostly use the SKILL.md only.",
+      "how_to_use": "For designers, install skills/find-skills/SKILL.md as a skill. The rest of the folder is the CLI source code (MIT, © Vercel) and is for developers.",
+      "entry_point": "Find_Skill/skills/find-skills/SKILL.md",
+      "maintainer": "Vercel (third party, MIT licence)",
+      "added": "2026-10-26"
+    },
+    {
+      "id": "interface-design-checklists-agnostic",
+      "name": "Interface Design Checklists",
+      "path": "interface-design-checklists-agnostic",
+      "summary": "Agent package with 1,084 review questions across 31 interface patterns, usable to design a component from scratch or to audit an existing design.",
+      "area": [
+        "UX",
+        "UI"
+      ],
+      "phase": [
+        "Design",
+        "Test"
+      ],
+      "format": [
+        "Skill",
+        "Checklist",
+        "Knowledge base",
+        "Template"
+      ],
+      "topics": [
+        "ux-review",
+        "usability",
+        "heuristic-evaluation",
+        "design-audit",
+        "interface-patterns",
+        "forms",
+        "web-forms",
+        "inline-validation",
+        "authentication",
+        "onboarding",
+        "offboarding",
+        "navigation",
+        "hamburger-menu",
+        "mega-dropdowns",
+        "back-button",
+        "modals",
+        "overlays",
+        "tables",
+        "filtering",
+        "sorting",
+        "accordion",
+        "carousels",
+        "sliders",
+        "date-pickers",
+        "autocomplete",
+        "configurators",
+        "maps",
+        "charts",
+        "timelines",
+        "video-player",
+        "product-page",
+        "pricing-plans",
+        "feature-comparison",
+        "reviews",
+        "testimonials",
+        "donation-forms",
+        "seating-plans",
+        "privacy",
+        "touch",
+        "disabled-buttons",
+        "exit-paths"
+      ],
+      "language": "it",
+      "platform": "Agnostic — any enterprise AI platform (instructions + knowledge base + output templates)",
+      "how_to_use": "Load AGENT-INSTRUCTIONS.md as the agent's instructions, attach the files in knowledge-base/ as knowledge, and use templates-html-di-riferimento/ as the output structure. Read only the pattern files relevant to the task.",
+      "entry_point": "interface-design-checklists-agnostic/README.md",
       "maintainer": "mimirossi",
       "added": "2026-10-26"
     }

@@ -1,0 +1,49 @@
+name: Update catalogue
+
+# Rebuilds catalog.json and the README table from each folder's metadata.
+# - Pull requests: validates the metadata, so problems show up before merging.
+# - Pushes to main: regenerates the catalogue and commits it if anything changed.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalogue-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  catalogue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate metadata
+        if: github.event_name == 'pull_request'
+        run: python3 .github/scripts/build_catalog.py --check
+
+      - name: Regenerate catalogue
+        if: github.event_name != 'pull_request'
+        run: python3 .github/scripts/build_catalog.py
+
+      - name: Commit changes
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- catalog.json README.md; then
+            echo "Catalogue already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json README.md
+          git commit -m "Update catalogue"
+          git push

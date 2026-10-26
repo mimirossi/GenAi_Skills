@@ -1,68 +1,63 @@
 # Contributing to the library
 
-Anyone can propose material. The library only stays searchable if every resource follows the same three rules.
+Anyone can propose material. There is **one rule**: every resource is a folder whose `README.md` starts with a metadata block. The catalogue (`catalog.json`) and the table in the main README are rebuilt automatically from those blocks — never edit them by hand.
 
-## 1. One folder per resource
+## 1. Create a folder
 
-- Put everything for one resource in its own folder at the repository root.
+- One folder per resource, at the repository root.
 - Name it in English, lowercase, with hyphens: `usability-test-script`, `design-tokens-guide`.
-- Do not include client material, internal company documents, personal data or anything under NDA. **This repository is public.**
+- **This repository is public.** No client material, internal company documents, personal data or anything under NDA.
 - If the material is someone else's work, keep its licence file and credit the author.
 
-## 2. A README in the folder
+## 2. Start its README with the metadata block
 
-Every folder needs a `README.md` that starts with this block, followed by any explanation you like:
+Copy this to the very top of `README.md` (the `---` lines included), fill it in, then write whatever explanation you like below it:
 
 ```markdown
 ---
 name: Usability Test Script
+summary: Moderated test script with warm-up, five task templates and debrief questions.
 area: [UX, Research]
 phase: [Test]
 format: [Template]
 topics: [usability-testing, moderation, tasks]
 language: en
+platform: Any — a Word/Docs template
+how_to_use: Duplicate the template, replace the tasks with your product's key flows, and run a pilot session first.
+entry_point: README.md
+maintainer: your-github-username
+added: 2026-10-26
 ---
+
+# Usability Test Script
 
 What it is, when to use it, and how.
 ```
 
-## 3. An entry in `catalog.json`
+### Fields
 
-Add an object to the `resources` list. This is what the search skill reads — a folder without an entry will never be found.
+| Field | Required | What to write |
+|---|---|---|
+| `name` | yes | Readable title |
+| `summary` | yes | One sentence: what it is and what it helps you do |
+| `area` | yes | One or more of `UX`, `UI`, `Research` |
+| `phase` | yes | One or more of `Discovery`, `Define`, `Ideate`, `Design`, `Test`, `Handoff` — only those where it genuinely helps |
+| `format` | yes | One or more of `Skill`, `Template`, `Checklist`, `Guide`, `Knowledge base` |
+| `topics` | yes | Free tags, lowercase English with hyphens. Reuse existing tags from `catalog.json` before inventing new ones |
+| `language` | no | `en`, `it`, … |
+| `platform` | no | Where it works (any, Claude, Figma, Miro…) |
+| `how_to_use` | no | The concrete first step for someone opening it for the first time |
+| `entry_point` | no | File to open first, relative to the folder (default: the README) |
+| `maintainer` | no | Your GitHub username |
+| `added` | no | Date, `YYYY-MM-DD` |
 
-```json
-{
-  "id": "usability-test-script",
-  "name": "Usability Test Script",
-  "path": "usability-test-script",
-  "summary": "One sentence: what it is and what it helps you do.",
-  "area": ["UX", "Research"],
-  "phase": ["Test"],
-  "format": ["Template"],
-  "topics": ["usability-testing", "moderation", "tasks"],
-  "language": "en",
-  "platform": "Where it works (any, Claude, Figma, Miro…)",
-  "how_to_use": "Concrete first step for someone opening it for the first time.",
-  "entry_point": "usability-test-script/README.md",
-  "maintainer": "your-github-username",
-  "added": "YYYY-MM-DD"
-}
-```
+Format rules: one field per line, lists in square brackets separated by commas, each value on a single line.
 
-### Allowed values
+**Third-party folders** whose README you shouldn't change: put the same block in a `LIBRARY.md` file in the folder instead. It takes priority over the README.
 
-| Field | Values |
-|---|---|
-| `area` | `UX`, `UI`, `Research` |
-| `phase` | `Discovery`, `Define`, `Ideate`, `Design`, `Test`, `Handoff` |
-| `format` | `Skill`, `Template`, `Checklist`, `Guide`, `Knowledge base` |
-| `topics` | Free tags, lowercase English with hyphens. Reuse existing tags before inventing new ones. |
+## 3. Submit
 
-Use only the phases where the resource genuinely helps — tagging everything with every phase makes search worse for everyone.
+- **Collaborators:** commit to `main`. Within a minute the catalogue updates itself.
+- **Everyone else:** fork the repository, add your folder, open a pull request. An automatic check validates the metadata and shows any problem on the pull request; the maintainer merges once it passes.
 
-## How to submit
-
-- **Collaborators:** commit directly to `main`.
-- **Everyone else:** fork the repository, add your folder and catalogue entry, and open a pull request. The maintainer reviews it before merging.
-
-Before submitting, check that `catalog.json` is still valid JSON (paste it into any JSON validator).
+If the automatic check fails, open the failed run in the **Actions** tab: each problem is listed with the file and the field to fix.

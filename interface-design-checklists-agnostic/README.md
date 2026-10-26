@@ -1,3 +1,18 @@
+---
+name: Interface Design Checklists
+summary: Agent package with 1,084 review questions across 31 interface patterns, usable to design a component from scratch or to audit an existing design.
+area: [UX, UI]
+phase: [Design, Test]
+format: [Skill, Checklist, Knowledge base, Template]
+topics: [ux-review, usability, heuristic-evaluation, design-audit, interface-patterns, forms, web-forms, inline-validation, authentication, onboarding, offboarding, navigation, hamburger-menu, mega-dropdowns, back-button, modals, overlays, tables, filtering, sorting, accordion, carousels, sliders, date-pickers, autocomplete, configurators, maps, charts, timelines, video-player, product-page, pricing-plans, feature-comparison, reviews, testimonials, donation-forms, seating-plans, privacy, touch, disabled-buttons, exit-paths]
+language: it
+platform: Agnostic — any enterprise AI platform (instructions + knowledge base + output templates)
+how_to_use: Load AGENT-INSTRUCTIONS.md as the agent's instructions, attach the files in knowledge-base/ as knowledge, and use templates-html-di-riferimento/ as the output structure. Read only the pattern files relevant to the task.
+entry_point: README.md
+maintainer: mimirossi
+added: 2026-10-26
+---
+
 # Interface Design Checklists — Pacchetto agnostico
 
 Questo pacchetto contiene tutto il materiale necessario per configurare

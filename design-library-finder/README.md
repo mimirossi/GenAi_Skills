@@ -1,10 +1,16 @@
 ---
 name: Design Library Finder
+summary: Skill that searches this repository's catalogue by area, work phase and topic and returns the resources to use, with links and how to apply them.
 area: [UX, UI, Research]
 phase: [Discovery, Define, Ideate, Design, Test, Handoff]
 format: [Skill]
 topics: [resource-search, library, skill-discovery, onboarding]
 language: en
+platform: Claude (claude.ai skills); the logic can be reused as agent instructions elsewhere
+how_to_use: Install this folder as a skill, then ask e.g. "find UX material for usability testing".
+entry_point: SKILL.md
+maintainer: mimirossi
+added: 2026-10-26
 ---
 
 # Design Library Finder

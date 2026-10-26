@@ -4,13 +4,15 @@ A shared library of AI skills and working material for designers — UX, UI and 
 
 ## What's inside
 
+<!-- catalog:start -->
 | Resource | Area | Phase | Format |
 |---|---|---|---|
-| [Interface Design Checklists](interface-design-checklists-agnostic) | UX, UI | Design, Test | Skill, Checklist, Knowledge base |
-| [Find Skills](Find_Skill) | All | All | Skill (+ CLI source) |
-| [Design Library Finder](design-library-finder) | All | All | Skill |
+| [Design Library Finder](design-library-finder) | UX, UI, Research | Discovery, Define, Ideate, Design, Test, Handoff | Skill |
+| [Find Skills (Vercel skills CLI)](Find_Skill) | UX, UI, Research | Discovery, Define, Ideate, Design, Test, Handoff | Skill |
+| [Interface Design Checklists](interface-design-checklists-agnostic) | UX, UI | Design, Test | Skill, Checklist, Knowledge base, Template |
+<!-- catalog:end -->
 
-The full, searchable list lives in [`catalog.json`](catalog.json).
+This table and the searchable [`catalog.json`](catalog.json) are generated automatically from each folder's metadata — don't edit them by hand.
 
 ## How to find material
 
@@ -37,7 +39,7 @@ Each resource's README explains platform-specific setup.
 
 ## Adding material
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). In short: one folder per resource, a README with standard fields, and an entry in `catalog.json`.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). In short: create one folder per resource and start its `README.md` with the metadata block. The catalogue updates itself.
 
 **This repository is public — never add client material, internal documents or anything under NDA.**
 
