@@ -42,6 +42,7 @@ FIELD_ORDER = [
 ]
 METADATA_FILES = ["LIBRARY.md", "README.md"]
 IGNORED_DIRS = {"node_modules"}
+SYSTEM_DIRS = {".git", ".github"}
 
 TABLE_START = "<!-- catalog:start -->"
 TABLE_END = "<!-- catalog:end -->"
@@ -80,8 +81,18 @@ def resource_dirs():
             yield name
 
 
+def hidden_folder_errors():
+    """Folders starting with '.' are hidden on GitHub and macOS — almost always a naming slip."""
+    return [
+        f"{name}/: folder names must not start with '.' — it hides the folder. "
+        f"Rename it, e.g. to '{name.lstrip('.').strip().lower().replace(' ', '-')}'"
+        for name in sorted(os.listdir(ROOT))
+        if name.startswith(".") and name not in SYSTEM_DIRS and os.path.isdir(os.path.join(ROOT, name))
+    ]
+
+
 def build():
-    resources, errors = [], []
+    resources, errors = [], hidden_folder_errors()
     for folder in resource_dirs():
         meta_file = next(
             (f for f in METADATA_FILES if os.path.isfile(os.path.join(ROOT, folder, f))), None

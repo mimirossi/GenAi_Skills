@@ -5,7 +5,8 @@ Anyone can propose material. There is **one rule**: every resource is a folder w
 ## 1. Create a folder
 
 - One folder per resource, at the repository root.
-- Name it in English, lowercase, with hyphens: `usability-test-script`, `design-tokens-guide`.
+- Name it in English, lowercase, with hyphens: `usability-test-script`, `design-tokens-guide`. Never start the name with a dot (`.design-critique`): it hides the folder.
+- Give every file an extension (`.md`, `.json`, `.html`…). A Claude skill's main file must be called `SKILL.md`.
 - **This repository is public.** No client material, internal company documents, personal data or anything under NDA.
 - If the material is someone else's work, keep its licence file and credit the author.
 

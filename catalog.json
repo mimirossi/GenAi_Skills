@@ -29,6 +29,42 @@
   },
   "resources": [
     {
+      "id": "design-critique",
+      "name": "Design Critique",
+      "path": "design-critique",
+      "summary": "Skill that gives structured feedback on a design — first impression, usability, visual hierarchy, consistency and accessibility — with severity ratings and prioritised fixes.",
+      "area": [
+        "UX",
+        "UI"
+      ],
+      "phase": [
+        "Ideate",
+        "Design",
+        "Test"
+      ],
+      "format": [
+        "Skill"
+      ],
+      "topics": [
+        "design-critique",
+        "design-review",
+        "feedback",
+        "usability",
+        "visual-hierarchy",
+        "consistency",
+        "design-system",
+        "accessibility",
+        "typography",
+        "figma"
+      ],
+      "language": "en",
+      "platform": "Claude (skill or slash command); the framework works as agent instructions on any platform",
+      "how_to_use": "Install this folder as a skill, then share a Figma link, screenshot or description with its context and stage (exploration, refinement, final) and ask for a critique.",
+      "entry_point": "design-critique/SKILL.md",
+      "maintainer": "Anthropic (third party, Apache 2.0 licence)",
+      "added": "2026-10-26"
+    },
+    {
       "id": "design-library-finder",
       "name": "Design Library Finder",
       "path": "design-library-finder",
