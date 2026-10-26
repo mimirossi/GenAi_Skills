@@ -2,7 +2,7 @@
 name: UX Writing & Content Strategy
 summary: Two skills for the words in a product — UX Writing for interface copy (microcopy, errors, empty states, CTAs) and Content Strategy for what content exists, how it is structured and who owns it.
 area: [UX]
-phase: [Define]
+phase: [Define, Design]
 format: [Skill, Guide]
 topics: [ux-writing, microcopy, ux-copy, error-messages, empty-states, cta, confirmation-messages, onboarding, voice-and-tone, content-strategy, content-audit, content-model, content-governance, content-hierarchy, terminology, localization]
 language: en
