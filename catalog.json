@@ -32,7 +32,7 @@
       "id": "design-library-finder",
       "name": "Design Library Finder",
       "path": "design-library-finder",
-      "summary": "Skill that searches this repository's catalogue by area, work phase and topic and returns the resources to use, with links and how to apply them.",
+      "summary": "Skill (for Claude) and universal prompt (for ChatGPT and other agents) that searches this repository's catalogue by area, work phase and topic and returns the resources to use, with links and how to apply them.",
       "area": [
         "UX",
         "UI",
@@ -56,8 +56,8 @@
         "onboarding"
       ],
       "language": "en",
-      "platform": "Claude (claude.ai skills); the logic can be reused as agent instructions elsewhere",
-      "how_to_use": "Install this folder as a skill, then ask e.g. \"find UX material for usability testing\".",
+      "platform": "Claude (SKILL.md); ChatGPT, Copilot, Gemini and enterprise agents (PROMPT.md)",
+      "how_to_use": "On Claude install this folder as a skill; on any other agent paste the prompt in PROMPT.md into its instructions. Then ask e.g. \"find UX material for usability testing\".",
       "entry_point": "design-library-finder/SKILL.md",
       "maintainer": "mimirossi",
       "added": "2026-10-26"
