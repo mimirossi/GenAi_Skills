@@ -208,13 +208,10 @@
       "path": "ux-writing",
       "summary": "Two skills for the words in a product — UX Writing for interface copy (microcopy, errors, empty states, CTAs) and Content Strategy for what content exists, how it is structured and who owns it.",
       "area": [
-        "UX",
-        "UI"
+        "UX"
       ],
       "phase": [
-        "Define",
-        "Design",
-        "Handoff"
+        "Define"
       ],
       "format": [
         "Skill",

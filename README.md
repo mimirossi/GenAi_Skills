@@ -11,7 +11,7 @@ A shared library of AI skills and working material for designers — UX, UI and 
 | [Design Library Finder](design-library-finder) | UX, UI, Research | Discovery, Define, Ideate, Design, Test, Handoff | Skill |
 | [Find Skills (Vercel skills CLI)](Find_Skill) | UX, UI, Research | Discovery, Define, Ideate, Design, Test, Handoff | Skill |
 | [Interface Design Checklists](interface-design-checklists-agnostic) | UX, UI | Design, Test | Skill, Checklist, Knowledge base, Template |
-| [UX Writing & Content Strategy](ux-writing) | UX, UI | Define, Design, Handoff | Skill, Guide |
+| [UX Writing & Content Strategy](ux-writing) | UX | Define | Skill, Guide |
 <!-- catalog:end -->
 
 This table and the searchable [`catalog.json`](catalog.json) are generated automatically from each folder's metadata — don't edit them by hand.
