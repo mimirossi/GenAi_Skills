@@ -38,7 +38,13 @@ If neither area, phase nor topic can be inferred, ask **one** short question, e.
 
 ## Step 2 — Read the catalogue
 
-Fetch the raw `catalog.json` URL above. If fetching fails, tell the user the library could not be reached and give them the repository link — do not guess the content.
+Fetch the raw `catalog.json` URL above. If that fails, try in order:
+
+1. `https://github.com/mimirossi/GenAi_Skills/blob/main/catalog.json`
+2. If the tool says the URL needs approval or is not allowed, ask the user to paste the catalogue link (`https://raw.githubusercontent.com/mimirossi/GenAi_Skills/main/catalog.json`) in the chat, then fetch it.
+3. If GitHub is connected in this session, read `catalog.json` from the repository through it.
+
+If none of these work, tell the user the library could not be reached and give them the repository link — do not guess the content.
 
 ## Step 3 — Match and rank
 
