@@ -1,7 +1,9 @@
 {
   "name": "GenAi_Skills — Design resource library",
   "repository": "https://github.com/mimirossi/GenAi_Skills",
-  "schema_version": "1.1",
+  "raw_base": "https://raw.githubusercontent.com/mimirossi/GenAi_Skills/main/",
+  "reading_files": "To read a file, fetch raw_base + its path from a resource's files list. Never fetch github.com/.../tree or /blob pages: they are for linking people, not for reading.",
+  "schema_version": "1.2",
   "generated": "Automatically from each folder's README.md/LIBRARY.md — do not edit by hand.",
   "updated": "2026-10-28",
   "taxonomy": {
@@ -62,7 +64,12 @@
       "how_to_use": "Install this folder as a skill, then share a Figma link, screenshot or description with its context and stage (exploration, refinement, final) and ask for a critique.",
       "entry_point": "design-critique/SKILL.md",
       "maintainer": "Anthropic (third party, Apache 2.0 licence)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "files": [
+        "design-critique/CONNECTORS.md",
+        "design-critique/README.md",
+        "design-critique/SKILL.md"
+      ]
     },
     {
       "id": "design-library-finder",
@@ -96,7 +103,12 @@
       "how_to_use": "On Claude install this folder as a skill; on any other agent paste the prompt in PROMPT.md into its instructions. Then ask e.g. \"find UX material for usability testing\".",
       "entry_point": "design-library-finder/SKILL.md",
       "maintainer": "mimirossi",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "files": [
+        "design-library-finder/PROMPT.md",
+        "design-library-finder/README.md",
+        "design-library-finder/SKILL.md"
+      ]
     },
     {
       "id": "design-systems",
@@ -147,7 +159,24 @@
       "how_to_use": "Pick the skill for your task from the list below (e.g. skills/design-token for the token layer, skills/component-spec for a component) and install that subfolder as a skill. Then describe your product, brand and existing system and ask for the deliverable.",
       "entry_point": "design-systems/README.md",
       "maintainer": "MC Dean (third party, MIT licence)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "files": [
+        "design-systems/README.md",
+        "design-systems/commands/audit-system.md",
+        "design-systems/commands/create-component.md",
+        "design-systems/commands/tokenize.md",
+        "design-systems/skills/accessibility-audit/SKILL.md",
+        "design-systems/skills/component-spec/SKILL.md",
+        "design-systems/skills/design-system-governance/SKILL.md",
+        "design-systems/skills/design-token/SKILL.md",
+        "design-systems/skills/documentation-template/SKILL.md",
+        "design-systems/skills/icon-system/SKILL.md",
+        "design-systems/skills/localization-design/SKILL.md",
+        "design-systems/skills/motion-system/SKILL.md",
+        "design-systems/skills/naming-convention/SKILL.md",
+        "design-systems/skills/pattern-library/SKILL.md",
+        "design-systems/skills/theming-system/SKILL.md"
+      ]
     },
     {
       "id": "find_skill",
@@ -182,7 +211,18 @@
       "how_to_use": "For designers, install skills/find-skills/SKILL.md as a skill. The rest of the folder is the CLI source code (MIT, © Vercel) and is for developers.",
       "entry_point": "Find_Skill/skills/find-skills/SKILL.md",
       "maintainer": "Vercel (third party, MIT licence)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "files": [
+        "Find_Skill/AGENTS.md",
+        "Find_Skill/LIBRARY.md",
+        "Find_Skill/README.md",
+        "Find_Skill/package.json",
+        "Find_Skill/docs/agents.md",
+        "Find_Skill/docs/commands.md",
+        "Find_Skill/docs/creating-skills.md",
+        "Find_Skill/docs/troubleshooting.md",
+        "Find_Skill/skills/find-skills/SKILL.md"
+      ]
     },
     {
       "id": "interface-design-checklists-agnostic",
@@ -251,7 +291,45 @@
       "how_to_use": "Load AGENT-INSTRUCTIONS.md as the agent's instructions, attach the files in knowledge-base/ as knowledge, and use templates-html-di-riferimento/ as the output structure. Read only the pattern files relevant to the task.",
       "entry_point": "interface-design-checklists-agnostic/README.md",
       "maintainer": "mimirossi",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "files": [
+        "interface-design-checklists-agnostic/AGENT-INSTRUCTIONS.md",
+        "interface-design-checklists-agnostic/README.md",
+        "interface-design-checklists-agnostic/knowledge-base/accordion.md",
+        "interface-design-checklists-agnostic/knowledge-base/authentication.md",
+        "interface-design-checklists-agnostic/knowledge-base/autocomplete.md",
+        "interface-design-checklists-agnostic/knowledge-base/back-button.md",
+        "interface-design-checklists-agnostic/knowledge-base/carousels.md",
+        "interface-design-checklists-agnostic/knowledge-base/configurators.md",
+        "interface-design-checklists-agnostic/knowledge-base/date-pickers.md",
+        "interface-design-checklists-agnostic/knowledge-base/designing-for-touch.md",
+        "interface-design-checklists-agnostic/knowledge-base/disabled-buttons.md",
+        "interface-design-checklists-agnostic/knowledge-base/donation-forms.md",
+        "interface-design-checklists-agnostic/knowledge-base/feature-comparison.md",
+        "interface-design-checklists-agnostic/knowledge-base/filtering.md",
+        "interface-design-checklists-agnostic/knowledge-base/hamburger.md",
+        "interface-design-checklists-agnostic/knowledge-base/inline-validation.md",
+        "interface-design-checklists-agnostic/knowledge-base/maps-charts.md",
+        "interface-design-checklists-agnostic/knowledge-base/mega-dropdowns.md",
+        "interface-design-checklists-agnostic/knowledge-base/modals-overlays.md",
+        "interface-design-checklists-agnostic/knowledge-base/navigation.md",
+        "interface-design-checklists-agnostic/knowledge-base/onboarding-offboarding.md",
+        "interface-design-checklists-agnostic/knowledge-base/pricing-plans.md",
+        "interface-design-checklists-agnostic/knowledge-base/privacy.md",
+        "interface-design-checklists-agnostic/knowledge-base/product-page.md",
+        "interface-design-checklists-agnostic/knowledge-base/providing-a-way-out.md",
+        "interface-design-checklists-agnostic/knowledge-base/reviews-testimonials.md",
+        "interface-design-checklists-agnostic/knowledge-base/seating-plans.md",
+        "interface-design-checklists-agnostic/knowledge-base/sliders.md",
+        "interface-design-checklists-agnostic/knowledge-base/sorting.md",
+        "interface-design-checklists-agnostic/knowledge-base/tables.md",
+        "interface-design-checklists-agnostic/knowledge-base/timelines.md",
+        "interface-design-checklists-agnostic/knowledge-base/video-player.md",
+        "interface-design-checklists-agnostic/knowledge-base/web-forms.md",
+        "interface-design-checklists-agnostic/templates-html-di-riferimento/checklist-template.html",
+        "interface-design-checklists-agnostic/templates-html-di-riferimento/report-template.html",
+        "interface-design-checklists-agnostic/templates-html-di-riferimento/wireframe-set.html"
+      ]
     },
     {
       "id": "presentation-craft",
@@ -309,7 +387,20 @@
       "how_to_use": "Install this folder as a skill. To build, describe the audience, the goal and what they should decide, and attach your material. To review, attach the deck (.pptx, PDF, screenshots or a Figma/Canva link) and ask for a review.",
       "entry_point": "presentation-craft/SKILL.md",
       "maintainer": "mimirossi",
-      "added": "2026-10-28"
+      "added": "2026-10-28",
+      "files": [
+        "presentation-craft/README.md",
+        "presentation-craft/SKILL.md",
+        "presentation-craft/references/accessibility.md",
+        "presentation-craft/references/data-viz.md",
+        "presentation-craft/references/density.md",
+        "presentation-craft/references/hierarchy-layout.md",
+        "presentation-craft/references/narrative-frameworks.md",
+        "presentation-craft/references/originality.md",
+        "presentation-craft/references/storyline.md",
+        "presentation-craft/references/template-fidelity.md",
+        "presentation-craft/references/visual-quality.md"
+      ]
     },
     {
       "id": "ux-writing",
@@ -350,7 +441,12 @@
       "how_to_use": "Install ux-writing/ for interface copy or content-strategy/ for content planning, each as its own skill. Then describe the screen, the user's situation and the product voice, and ask for copy or a content plan.",
       "entry_point": "ux-writing/README.md",
       "maintainer": "MC Dean (third party, MIT licence)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "files": [
+        "ux-writing/README.md",
+        "ux-writing/content-strategy/SKILL.md",
+        "ux-writing/ux-writing/SKILL.md"
+      ]
     }
   ]
 }

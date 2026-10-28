@@ -38,11 +38,14 @@ REQUIRED = ["name", "summary", "area", "phase", "format", "topics"]
 LIST_FIELDS = ["area", "phase", "format", "topics"]
 FIELD_ORDER = [
     "id", "name", "path", "summary", "area", "phase", "format", "topics",
-    "language", "platform", "how_to_use", "entry_point", "maintainer", "added",
+    "language", "platform", "how_to_use", "entry_point", "maintainer", "added", "files",
 ]
 METADATA_FILES = ["LIBRARY.md", "README.md"]
 IGNORED_DIRS = {"node_modules"}
 SYSTEM_DIRS = {".git", ".github"}
+RAW_BASE = "https://raw.githubusercontent.com/mimirossi/GenAi_Skills/main/"
+TEXT_EXTENSIONS = {".md", ".txt", ".csv", ".json", ".html"}
+MAX_FILES = 80
 
 TABLE_START = "<!-- catalog:start -->"
 TABLE_END = "<!-- catalog:end -->"
@@ -91,6 +94,22 @@ def hidden_folder_errors():
     ]
 
 
+def readable_files(folder):
+    """Text files an agent may need to open, as repo-relative paths.
+
+    Agents read these through RAW_BASE + path: GitHub's HTML pages (tree/blob)
+    are often unreadable to web-fetch tools, and raw URLs can't list a folder,
+    so the catalogue carries the exact paths.
+    """
+    found = []
+    for dirpath, dirnames, filenames in os.walk(os.path.join(ROOT, folder)):
+        dirnames[:] = sorted(d for d in dirnames if not d.startswith(".") and d not in IGNORED_DIRS)
+        for name in sorted(filenames):
+            if os.path.splitext(name)[1].lower() in TEXT_EXTENSIONS:
+                found.append(os.path.relpath(os.path.join(dirpath, name), ROOT).replace(os.sep, "/"))
+    return found[:MAX_FILES]
+
+
 def build():
     resources, errors = [], hidden_folder_errors()
     for folder in resource_dirs():
@@ -125,6 +144,7 @@ def build():
             errors.extend(f"{rel}: {p}" for p in problems)
             continue
 
+        meta["files"] = readable_files(folder)
         meta["topics"] = [t.lower() for t in meta["topics"]]
         meta["id"] = meta.get("id") or folder.lower()
         meta["path"] = folder
@@ -157,7 +177,10 @@ def write_outputs(resources):
     catalog = {
         "name": "GenAi_Skills — Design resource library",
         "repository": REPO_URL,
-        "schema_version": "1.1",
+        "raw_base": RAW_BASE,
+        "reading_files": "To read a file, fetch raw_base + its path from a resource's files list. "
+        "Never fetch github.com/.../tree or /blob pages: they are for linking people, not for reading.",
+        "schema_version": "1.2",
         "generated": "Automatically from each folder's README.md/LIBRARY.md — do not edit by hand.",
         "updated": previous.get("updated", ""),
         "taxonomy": {**TAXONOMY, "topics": "Free lowercase tags in English"},
