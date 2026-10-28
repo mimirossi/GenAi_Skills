@@ -3,7 +3,7 @@
   "repository": "https://github.com/mimirossi/GenAi_Skills",
   "schema_version": "1.1",
   "generated": "Automatically from each folder's README.md/LIBRARY.md — do not edit by hand.",
-  "updated": "2026-10-26",
+  "updated": "2026-10-28",
   "taxonomy": {
     "area": [
       "UX",
@@ -252,6 +252,64 @@
       "entry_point": "interface-design-checklists-agnostic/README.md",
       "maintainer": "mimirossi",
       "added": "2026-10-26"
+    },
+    {
+      "id": "presentation-craft",
+      "name": "Presentation Craft",
+      "path": "presentation-craft",
+      "summary": "Skill to build, review and fix slide decks against one quality standard — storyline, narrative structure by deck type, action titles, text density, data visualization, hierarchy, visual craft, originality, brand fidelity and accessibility — with a scored report and slide-by-slide fixes.",
+      "area": [
+        "UX",
+        "UI",
+        "Research"
+      ],
+      "phase": [
+        "Define",
+        "Design",
+        "Test",
+        "Handoff"
+      ],
+      "format": [
+        "Skill",
+        "Checklist",
+        "Guide"
+      ],
+      "topics": [
+        "presentations",
+        "slides",
+        "slide-deck",
+        "pitch-deck",
+        "storytelling",
+        "storyline",
+        "narrative",
+        "action-titles",
+        "client-proposal",
+        "consulting-deliverable",
+        "stakeholder-presentation",
+        "research-readout",
+        "design-review",
+        "portfolio",
+        "keynote",
+        "workshop",
+        "data-visualization",
+        "charts",
+        "text-density",
+        "visual-hierarchy",
+        "typography",
+        "visual-design",
+        "originality",
+        "brand-fidelity",
+        "templates",
+        "accessibility",
+        "deck-review",
+        "pptx"
+      ],
+      "language": "en",
+      "platform": "Claude (skill); reviewing .pptx files at full depth needs a session that can run Python. The framework works as agent instructions on any platform.",
+      "how_to_use": "Install this folder as a skill. To build, describe the audience, the goal and what they should decide, and attach your material. To review, attach the deck (.pptx, PDF, screenshots or a Figma/Canva link) and ask for a review.",
+      "entry_point": "presentation-craft/SKILL.md",
+      "maintainer": "mimirossi",
+      "added": "2026-10-28"
     },
     {
       "id": "ux-writing",

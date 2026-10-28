@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Structural inventory of a .pptx deck for presentation-quality-review.
+"""Structural inventory of a .pptx deck for the presentation-craft skill.
 
 Usage:
     python deck_inventory.py deck.pptx            # human-readable summary
