@@ -14,6 +14,7 @@ A shared library of AI skills and working material for designers — UX, UI and 
 | [Find Skills (Vercel skills CLI)](Find_Skill) | UX, UI, Research | Discovery, Define, Ideate, Design, Test, Handoff | Skill |
 | [Interface Design Checklists](interface-design-checklists-agnostic) | UX, UI | Design, Test | Skill, Checklist, Knowledge base, Template |
 | [Presentation Craft](presentation-craft) | UX, UI, Research | Define, Design, Test, Handoff | Skill, Checklist, Guide |
+| [Typography Audit](typography-audit) | UI, UX | Design, Test, Handoff | Skill, Checklist |
 | [UX Writing & Content Strategy](ux-writing) | UX | Define, Design | Skill, Guide |
 <!-- catalog:end -->
 

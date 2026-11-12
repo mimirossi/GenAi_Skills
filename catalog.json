@@ -465,6 +465,63 @@
       ]
     },
     {
+      "id": "typography-audit",
+      "name": "Typography Audit",
+      "path": "typography-audit",
+      "summary": "Skill that audits a typography system against 42 binary checkpoints in 7 blocks — architecture, roles, scale, responsive, accessibility, handoff, AI-readiness — and returns a maturity level and the weakest block to fix first, plus 5 standalone diagnostics such as tracing a token chain or writing the context file AI tools read.",
+      "area": [
+        "UI",
+        "UX"
+      ],
+      "phase": [
+        "Design",
+        "Test",
+        "Handoff"
+      ],
+      "format": [
+        "Skill",
+        "Checklist"
+      ],
+      "topics": [
+        "typography",
+        "typography-audit",
+        "type-scale",
+        "text-styles",
+        "type-roles",
+        "type-hierarchy",
+        "design-tokens",
+        "tokens",
+        "design-system",
+        "design-system-audit",
+        "responsive",
+        "breakpoints",
+        "line-height",
+        "letter-spacing",
+        "font-weight",
+        "accessibility",
+        "wcag",
+        "contrast",
+        "text-resize",
+        "text-spacing",
+        "handoff",
+        "code-mapping",
+        "ai-ready",
+        "ai-context",
+        "figma",
+        "css"
+      ],
+      "language": "en",
+      "platform": "Claude (skill; reads Figma files when the Figma connector is on); the framework works as agent instructions on any platform",
+      "how_to_use": "Install this folder as a skill. Share what your type system lives in — a Figma library link, token or CSS files, or screenshots — and ask for a full typography audit, or for one diagnostic such as \"trace this token chain\".",
+      "entry_point": "typography-audit/SKILL.md",
+      "maintainer": "mimirossi",
+      "added": "2026-11-12",
+      "files": [
+        "typography-audit/README.md",
+        "typography-audit/SKILL.md"
+      ]
+    },
+    {
       "id": "ux-writing",
       "name": "UX Writing & Content Strategy",
       "path": "ux-writing",

@@ -80,7 +80,7 @@ Have these ready — the skill asks for anything missing:
 - [Design Systems](../design-systems) — `design-token`, `naming-convention` and `theming-system` for planning the system; this skill builds it in Figma.
 - [Design Critique](../design-critique) — check that screens actually use the system consistently.
 
-The skill refers to a `typography-audit` skill for its typography checkpoints. That skill is not in this library yet; the rules this skill needs are written into it.
+- [Typography Audit](../typography-audit) — the skill refers to it for its typography checkpoints (target 40/40). Build the variables here, then run the audit to verify them.
 
 ## Version
 
