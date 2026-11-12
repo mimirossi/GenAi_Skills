@@ -5,7 +5,7 @@
   "reading_files": "To read a file, fetch raw_base + its path from a resource's files list. Never fetch github.com/.../tree or /blob pages: they are for linking people, not for reading.",
   "schema_version": "1.2",
   "generated": "Automatically from each folder's README.md/LIBRARY.md — do not edit by hand.",
-  "updated": "2026-10-28",
+  "updated": "2026-11-12",
   "taxonomy": {
     "area": [
       "UX",
@@ -176,6 +176,68 @@
         "design-systems/skills/naming-convention/SKILL.md",
         "design-systems/skills/pattern-library/SKILL.md",
         "design-systems/skills/theming-system/SKILL.md"
+      ]
+    },
+    {
+      "id": "figma-design-system-variables",
+      "name": "Figma Design System Variables",
+      "path": "figma-design-system-variables",
+      "summary": "Skill that builds a design system's variables in Figma — brand primitives with OKLCH tonal scales, semantic aliases, Light/Dark component mapping, responsive typography and spacing, elevation, motion with reduced-motion, scopes, code syntax — then validates the whole set and delivers a report.",
+      "area": [
+        "UI"
+      ],
+      "phase": [
+        "Design",
+        "Handoff"
+      ],
+      "format": [
+        "Skill",
+        "Guide"
+      ],
+      "topics": [
+        "figma",
+        "figma-variables",
+        "variables",
+        "design-tokens",
+        "tokens",
+        "design-system",
+        "color-scales",
+        "tonal-scales",
+        "oklch",
+        "dark-mode",
+        "light-dark",
+        "theming",
+        "typography",
+        "type-scale",
+        "text-styles",
+        "spacing",
+        "component-spacing",
+        "responsive",
+        "breakpoints",
+        "grid",
+        "elevation",
+        "shadows",
+        "effect-styles",
+        "motion",
+        "reduced-motion",
+        "naming-convention",
+        "scopes",
+        "code-syntax",
+        "dev-mode",
+        "accessibility",
+        "wcag",
+        "contrast",
+        "handoff"
+      ],
+      "language": "it",
+      "platform": "Claude with the Figma connector (builds the variables in the file); without it, the skill outputs the full specification as tables to import",
+      "how_to_use": "Install this folder as a skill and connect Figma. Then share the Figma file link, the brand colours, the fonts, breakpoints and grid, and your Figma plan, and ask it to build the variables.",
+      "entry_point": "figma-design-system-variables/SKILL.md",
+      "maintainer": "mimirossi",
+      "added": "2026-11-12",
+      "files": [
+        "figma-design-system-variables/README.md",
+        "figma-design-system-variables/SKILL.md"
       ]
     },
     {
